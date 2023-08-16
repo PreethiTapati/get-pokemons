@@ -1,6 +1,6 @@
 # Get Pokemon
 
-> A simple website allows the user to get a pokemon by id.
+> A simple website allows the user to get different pokemon by ids.
 
 ## Table of contents
 
