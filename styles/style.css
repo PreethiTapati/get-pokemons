@@ -8,39 +8,45 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a;
+    background-image: url('../assets/pokeball.gif');
+    min-height: 100vh;
+    margin: 0;
+    color: #304933;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    color: #f3f3f3;
 }
 
-.container {
-    font-family: Arial, sans-serif;
-    max-width: 300px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
+input,
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 input {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 2px solid #ccc;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    width: 300px;
+    height: 25px;
+    border:  2px solid #ccc;
     border-radius: 5px;
+    padding: 10px;
     text-align: center;
 }
 
+
 button {
     padding: 10px 20px;
-    background-color: #4caf50;
-    border: none;
-    color: white;
-    cursor: pointer;
+    margin-bottom: 20px;
+    border: 1px solid #333333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
+    background-color: #304933;
+    color: aliceblue;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
@@ -48,46 +54,37 @@ button:hover {
     background-color: #45a049;
 }
 
-#root {
-    margin: 20px 0;
-    width: 300px;
-    height: 500px;
-}
 
-#root img {
-    max-width: 100%;
-    height: auto;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.pokemon-container {
+.container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    border: 1px solid #333333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
     text-align: center;
-    margin: 20px;
-    margin-right: 62px;
 }
 
-.pokemon-container h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+h2 {
+    color: #123e25;
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.5;
+    text-transform: capitalize;
 }
 
-.pokemon-container img {
-    width: 200px;
-    height: auto;
-    margin: 10px;
+h3 {
+    color: #394814;
+    line-height: 1.5;
 }
 
-.pokemon-container h3 {
-    margin: 10px 0;
-}
-
-.pokemon-container ul {
+li {
     list-style-type: none;
-    padding: 0;
 }
 
-.pokemon-container li {
-    font-size: 18px;
-}
+
+
+

@@ -1,20 +1,24 @@
-import createAbilitiesList from './createAbilitiesList.js';
+import createAbilitiesList from  './createAbilitiesList.js'
 
-const updatePokemon = (pokemonDom, pokemonData) => {
+const updatePokemon = (pokemonData) => {
+    const container = document.getElementById('container');
     // update name
-    const name = pokemonDom.querySelector('#name');
-    name.innerText = pokemonData.name;
+    const title = document.getElementById('name');
+    title.innerText = pokemonData.name;
 
     // update img
-    const img = pokemonDom.querySelector('#img');
-    img.src = pokemonData.sprites.front_default;
-    img.alt = `${pokemonData.name} Image`;
+    const image = document.getElementById('img');
+    image.src = pokemonData.sprites.back_default;
+    image.alt = `${pokemonData.name} Image`;
+    image.id = 'img';
+
+     // Clear previous abilities
+    const abilitiesContainer = document.getElementById('ability-list');
+    abilitiesContainer.innerHTML = ''; 
 
     const abilitiesList = createAbilitiesList(pokemonData.abilities);
-    const oldList = pokemonDom.querySelector('#ability-list');
-    oldList.replaceWith(abilitiesList);
+    abilitiesContainer.appendChild(abilitiesList);
 
-    return pokemonDom;
+    return container;
 };
-
 export default updatePokemon;
