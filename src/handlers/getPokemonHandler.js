@@ -35,7 +35,7 @@ const getPokemonHandler = async () => {
 
 const isValidId = (id) => {
     const parsedId = parseInt(id);
-    return !isNaN(parsedId) && parsedId > 0 && parsedId < 1281;
+    return !isNaN(parsedId) && parsedId > 0 && parsedId < 1000;
 };
 
 const fetchPokemonData = async (ids) => {
