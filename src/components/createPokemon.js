@@ -2,7 +2,7 @@ import createAbilitiesList from './createAbilitiesList.js';
 
 const createPokemon = (pokemonData) => {
     // container
-    console.log(pokemonData)
+    console.log(pokemonData);
     const container = document.createElement('div');
     container.className = 'pokemon-container';
     container.id = 'container';
@@ -28,5 +28,3 @@ const createPokemon = (pokemonData) => {
 };
 
 export default createPokemon;
-
-

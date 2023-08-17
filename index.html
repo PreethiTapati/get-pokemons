@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/style.css" />
+        <title>Pokemon finder</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <title>Pokemon finder</title>
-</head>
+    <body>
+        <div class="container">
+            <div id="root"></div>
+            <input type="text" id="search-bar" placeholder="get pokemon card" />
+            <button type="search-button" id="search-button">
+                Generate Pokemon
+            </button>
+        </div>
 
-<body>
-    <div class="container">
-        <div id="root"></div>
-        <input type="text" id="search-bar" placeholder="get pokemon card" />
-        <button type="search-button" id="search-button">
-            Generate Pokemon
-        </button>
-    </div>
-
-
-    <script type="module" src="./src/init.js"></script>
-</body>
-
+        <script type="module" src="./src/init.js"></script>
+    </body>
 </html>

@@ -9,14 +9,14 @@ const getPokemonHandler = async () => {
     const userInput = dom.searchBar.value;
 
     if (!userInput) {
-        displayErrorMessage('Please write IDs separated with \',\'');
+        displayErrorMessage("Please write IDs separated with ','");
         return;
     }
 
     const idArray = userInput
         .split(',')
-        .map(id => id.trim())
-        .filter(id => isValidId(id));
+        .map((id) => id.trim())
+        .filter((id) => isValidId(id));
 
     if (idArray.length === 0) {
         displayErrorMessage('Please write correct IDs');
@@ -27,9 +27,9 @@ const getPokemonHandler = async () => {
 
     const pokemonDataArray = await fetchPokemonData(uniqueIds);
 
-    pokemonDataArray.forEach(pokemonData => {
+    pokemonDataArray.forEach((pokemonData) => {
         const pokemonDom = createPokemon(pokemonData);
-        dom.root.append(pokemonDom); 
+        dom.root.append(pokemonDom);
     });
 };
 
@@ -39,13 +39,13 @@ const isValidId = (id) => {
 };
 
 const fetchPokemonData = async (ids) => {
-    const pokemonPromises = ids.map(id => getPokemonById(id));
+    const pokemonPromises = ids.map((id) => getPokemonById(id));
     return await Promise.all(pokemonPromises);
 };
 
 const displayErrorMessage = (message) => {
-    dom.error.innerText = message; 
-    dom.root.append(dom.error); 
+    dom.error.innerText = message;
+    dom.root.append(dom.error);
 };
 
 export default getPokemonHandler;

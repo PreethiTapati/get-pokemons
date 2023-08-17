@@ -1,4 +1,4 @@
-import createAbilitiesList from  './createAbilitiesList.js'
+import createAbilitiesList from './createAbilitiesList.js';
 
 const updatePokemon = (pokemonData) => {
     const container = document.getElementById('container');
@@ -12,9 +12,9 @@ const updatePokemon = (pokemonData) => {
     image.alt = `${pokemonData.name} Image`;
     image.id = 'img';
 
-     // Clear previous abilities
+    // Clear previous abilities
     const abilitiesContainer = document.getElementById('ability-list');
-    abilitiesContainer.innerHTML = ''; 
+    abilitiesContainer.innerHTML = '';
 
     const abilitiesList = createAbilitiesList(pokemonData.abilities);
     abilitiesContainer.appendChild(abilitiesList);
